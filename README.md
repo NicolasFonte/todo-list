@@ -16,6 +16,7 @@ This is a very simple TODO list application, written using spring boot, groovy, 
 * Unit and Integration Tests
 * Loose coupling and string cohesion
 * Cucumber Tests (If you can't then that's fine too)
+* Usage of Java 8
 
 Note: You are free to add/delete classes/modules are you seem fit
 
