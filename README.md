@@ -13,7 +13,7 @@ This is a very simple TODO list application, written using spring boot, groovy, 
 
 * Basic Code Quality and hygine
 * TDD
-* Unit and Integration Tests
+* Unit and Integration Tests - Ideally using spock
 * Loose coupling and string cohesion
 * Cucumber Tests (If you can't then that's fine too)
 * Usage of Java 8
