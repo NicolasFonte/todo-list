@@ -3,7 +3,7 @@
 This is repo for online excercise for yordex
 
 ### What is this repository for? ###
-This is a very simple TODO list application, written using spring boot, groovy, java. There is some code there, you need to improve it by adding below features
+This is a very simple TODO list REST based application, written using spring boot, groovy, java. There is some code there, you need to improve it by adding below features
 
 * Add/Edit a simple task with due date
 * Add a repeated task (Dailiy, Weekly, Monthly, Yearly, Every Two Years etc)
@@ -17,6 +17,7 @@ This is a very simple TODO list application, written using spring boot, groovy, 
 * Loose coupling and string cohesion
 * Cucumber Tests (If you can't then that's fine too)
 * Usage of Java 8
+* Knowledge of REST
 
 Note: You are free to add/delete classes/modules are you seem fit
 
