@@ -7,6 +7,7 @@ This is a very simple TODO list application, written using spring boot, groovy, 
 
 * Add/Edit a simple task with due date
 * Add a repeated task (Dailiy, Weekly, Monthly, Yearly, Every Two Years etc)
+* Secured Access to application, only registered users are allowed (You dont need to write code create users, just created entities and DB schema then load users from a sql file)
 
 ### What we looking for? ###
 
