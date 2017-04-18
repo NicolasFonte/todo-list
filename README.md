@@ -17,5 +17,7 @@ This is a very simple TODO list application, written using spring boot, groovy, 
 * Loose coupling and string cohesion
 * Cucumber Tests (If you can't then that's fine too)
 
+Note: You are free to add/delete classes/modules are you seem fit
+
 ### How to submit test? ###
 Please create a private fork and once done please send a PR to integration branch.
