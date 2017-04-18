@@ -14,3 +14,6 @@ This is a very simple TODO list application, written using spring boot, groovy, 
 * TDD
 * Unit and Integration Tests
 * Cucumber Tests (If you can't then that's fine too)
+
+### How to submit test? ###
+Please create a private fork and once done please send a PR to integration branch.
