@@ -13,7 +13,7 @@ This is a very simple TODO list REST based application, written using spring boo
 
 * Basic Code Quality and hygine
 * TDD
-* Unit and Integration Tests - Ideally using spock
+* Unit and Integration Tests - **Must use** spock
 * Loose coupling and string cohesion
 * Cucumber Tests (If you can't then that's fine too)
 * Usage of Java 8
