@@ -9,10 +9,10 @@ import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.security.Principal;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -27,20 +27,21 @@ public class TaskResource {
 
     @ResponseBody
     @GetMapping("/tasks")
-    public List<Task> taskList() {
-        return taskService.findAll();
+    public List<Task> todaysTasks(Principal principal) {
+        User user = (User) ((UsernamePasswordAuthenticationToken) principal).getPrincipal();
+        return taskService.todaysTask(user);
     }
 
     @ResponseBody
-    @PostMapping("/tasks/complete")
-    public Task toggleComplete(@RequestParam Long id) {
+    @PostMapping("/tasks/complete/{id}")
+    public Task toggleComplete(@PathVariable Long id) {
         return taskService.toggleComplete(id);
     }
 
     @ResponseBody
-    @PostMapping("/tasks/delete")
-    public void delete(Task task) {
-        taskService.delete(task.getId());
+    @PostMapping("/tasks/delete/{id}")
+    public void delete(@PathVariable Long id) {
+        taskService.delete(id);
     }
 
     @PostMapping("/tasks/create")

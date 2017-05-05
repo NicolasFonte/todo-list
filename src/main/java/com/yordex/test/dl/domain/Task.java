@@ -3,6 +3,7 @@ package com.yordex.test.dl.domain;
 import groovy.transform.ToString;
 import groovy.transform.builder.Builder;
 import java.util.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.OneToOne;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.annotations.Type;
 
 @Entity
@@ -42,7 +45,8 @@ public class Task {
     @Type(type = "date")
     private Date dueDate;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "frequency_id")
     private Frequency frequency;
 

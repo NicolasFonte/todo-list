@@ -1,4 +1,4 @@
-<h1>Test Todo list.</h1>
+<h1>Yordex Test Todo list.</h1>
 <div class="container" ng-show="authenticated">
     <form role='form' ng-submit='controller.addTodo()'>
         <div class='form-group row'>
@@ -28,10 +28,11 @@
 
             <div ng-show="controller.repeat">
                 <div class="form-control col-xs-3">
-                    <label for="example-number-input">Over every</label>
-                    <input type="number" value="2" id="example-number-input">
+                    <label for="example-number-input">For every next:</label>
+                    <input type="number" value="2" id="example-number-input"
+                           ng-model="controller.newTodo.frequency.times">
 
-                    <select class="custom-select form-inline">
+                    <select class="custom-select form-inline" ng-model="controller.newTodo.frequency.frequencyType">
                         <option selected>Choose...</option>
                         <option value="Days">Days</option>
                         <option value="Weeks">Weeks</option>

@@ -72,7 +72,7 @@ angular.module('hello', ['ngRoute']).config(function ($routeProvider, $httpProvi
             });
         };
 
-    }).controller('home', function ($http) {
+    }).controller('home', function ($http, $route) {
     var self = this;
     self.repeat = false;
 
@@ -89,21 +89,22 @@ angular.module('hello', ['ngRoute']).config(function ($routeProvider, $httpProvi
     self.newTodo = {complete: false};
     self.addTodo = function () {
         $http.post('api/tasks/create', self.newTodo).finally(function () {
+            $route.reload();
             console.log("task added");
         });
     };
 
     self.markCompleted = function (task) {
-        $http.post('api/tasks/complete', self.newTodo).finally(function () {
+        $http.post('api/tasks/complete/' + task.id, {}).finally(function () {
+            $route.reload();
             console.log("task completed");
         });
     };
 
     self.deleteTask = function (task) {
-        $http.post('api/tasks/delete', self.newTodo).finally(function () {
+        $http.post('api/tasks/delete/' + task.id, {}).finally(function () {
+            $route.reload();
             console.log("task deleted");
         });
     };
-
-
 });
